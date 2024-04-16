@@ -47,9 +47,6 @@ jobs:
         #   mkdir -p "$PKGDEST"
         #   echo "test" > "$PKGDEST"/linux-$_cpusched.pkg.tar.zst
 
-      - name: Cleanup useless DEB files
-        run: rm -rf DEBS/*dbg*.deb DEBS/*libc-dev*.deb
-
       - name: rename kernel config
         run: mv kernelconfig.new kernelconfig.ubuntu.${{ env._cpusched }}.txt
 
